@@ -1,4 +1,5 @@
 import requests
+import time
 
 # 2219124641
 url_body = 'https://weibo.cn/u/{}?page={}'
@@ -23,4 +24,4 @@ def fetchPage(uid, pagenum):
         wf.write(req.text)
 
 if __name__ == '__main__':
-    fetchPage(2219124641, 1)
+    pass

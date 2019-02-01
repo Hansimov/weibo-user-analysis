@@ -14,14 +14,13 @@ def parseXML(uid, pagenum):
 
     # text = re_text.findall(doc)
     pubtime = re_pubtime.findall(doc)
-    pagesize = re_pagesize.findall(doc)[0]
+    pagesize = int(re_pagesize.findall(doc)[0])
     idx = re_idx.findall(doc)
 
     created_time = getFileTime(filename)[0]
     # print(type(created_time))
-    for i in range(len(pubtime)):
-        # print(pubtime[i])
-        print(idx[i], convertTime(created_time, pubtime[i]), pubtime[i])
+    # for i in range(len(pubtime)):
+        # print(idx[i], convertTime(created_time, pubtime[i]), pubtime[i])
 
     return pagesize
 
