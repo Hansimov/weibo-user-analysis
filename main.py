@@ -21,12 +21,12 @@ if __name__ == '__main__':
     uid = 2219124641
     # uid = 3761166897
     fetchPage(uid, 1)
-    pagesize = parseXML(uid, 1)
+    pagesize = parseXML(uid, 1)[0]
     i = 1
     while i <= pagesize:
         print('Fetching Page {}'.format(i))
         fetchPage(uid, i)
         i += 1
         if i == pagesize+1:
-            pagesize = parseXML(uid, i-1)
-        time.sleep(0.1)
+            pagesize = parseXML(uid, i-1)[0]
+        time.sleep(0.5)
