@@ -22,5 +22,6 @@ url = url_fans.format(uid,99)
 cookies = parseCookies(cookiesString)
 req = requests.get(url,cookies=cookies)
 
-# def parse
+# def parseHTML():
+#     pass
 print(req.text)
